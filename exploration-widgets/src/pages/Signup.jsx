@@ -1,5 +1,5 @@
-import { Form } from "../components/form";
+
 
 export const SignUp = () => {
-  return <Form />;
+  return <div>hej</div>;
 };

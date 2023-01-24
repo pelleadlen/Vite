@@ -1,19 +1,26 @@
-:root {
-  font-family: inter;
-  --fontWeight: 400;
-  --fontItalic: 0;
-  --fontSize: 128px;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: ABC Whyte Inktrap Variable Edu;
-  src: local("ABC Whyte Inktrap Variable Edu"),
-    url("./assets/ABCWhyteInktrapVariableEdu.woff");
+
+:root {
+  font-family: Abc Diatype Variable Edu;
+  --fontWeight: 400;
+  --fontItalic: 0;
+  --fontSize: 128px;
+  --lineHeight: 100%;
+  --letterSpacing: 0em;
 }
+
+
+
+@font-face {
+  font-family: ABC Diatype  Variable Edu;
+  src: local("ABC Diatype Variable Edu"),
+    url("./assets/ABCDiatypeVariableEdu.woff");
+}
+
+
 
 img {
   max-width: 100%;
@@ -50,131 +57,5 @@ body {
   }
 }
 
-.wrapper {
-  @include container;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1rem;
 
-  @media (max-width: 640px) {
-    flex-direction: column;
-  }
-}
 
-.typography-modal {
-  height: 50%;
-  font-size: 8rem;
-  line-height: 1;
-  padding: 3rem;
-  border-radius: 1.5rem;
-  overflow: scroll;
-  background-color: rgb(229 231 235);
-  overflow-wrap: break-word;
-  width: 5ch;
-}
-.whyte {
-  font-family: ABC Whyte Inktrap Variable Edu;
-  font-variation-settings: "wght" var(--fontWeight), "ital" var(--fontItalic);
-  font-size: var(--fontSize);
-  transition: all 100ms;
-}
-
-footer {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: space-between;
-  width: 100%;
-  padding: 2rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
-  .color-change-wrapper {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .slider-container {
-    display: flex;
-    gap: 0.75rem;
-  }
-}
-
-.color-changer {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-
-  //typography
-  font-family: "ABC Diatype Edu";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  letter-spacing: -0.02em;
-
-  div {
-    color: #01ef8e;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-
-    .color-picker {
-      cursor: pointer;
-      width: 12px;
-      height: 12px;
-      background: #01ef8e;
-    }
-  }
-}
-
-//Invidiual Sliders
-
-.slider {
-  label {
-    font-family: "ABC Diatype Edu";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-
-    /* identical to box height */
-
-    letter-spacing: -0.02em;
-
-    color: #000000;
-  }
-  input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: #333333;
-    height: 1px;
-    cursor: pointer;
-  }
-
-  input[type="range"]::-webkit-slider-runnable-track {
-    -webkit-appearance: none;
-    appearance: none;
-    height: 1px;
-    background: #e5e5e5; /* Change the background color of the track */
-  }
-
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    margin-top: -6px; /* Centers thumb on the track */
-    background: #333333;
-    border-radius: 100px;
-    border: 1px solid #fff;
-    height: 12px;
-    width: 12px;
-  }
-
-  input[type="range"]:focus {
-    outline: none;
-  }
-}

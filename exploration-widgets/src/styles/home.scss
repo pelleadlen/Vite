@@ -25,14 +25,30 @@
   overflow-wrap: break-word;
   width: 5ch;
 
+  max-width: 50%;
+
+  @font-face {
+    font-family: ABC Whyte Inktrap Variable Edu;
+    src: local("ABC Whyte Inktrap Variable Edu"),
+      url("./assets/ABCWhyteInktrapVariableEdu.woff");
+  }
+
   .whyte {
     font-family: ABC Whyte Inktrap Variable Edu;
     font-variation-settings: "wght" var(--fontWeight), "ital" var(--fontItalic);
     font-size: var(--fontSize);
     transition: all 100ms;
+    line-height: var(--lineHeight);
     color: $darkGray;
+    letter-spacing: var(--letterSpacing);
+
+ 
+
   }
 }
+
+
+
 
 footer {
   display: flex;
@@ -70,11 +86,19 @@ footer {
   line-height: 14px;
   letter-spacing: -0.02em;
 
-  div {
-    color: #01ef8e;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
+  input {
+
+ border: 0px;
+ padding: 0;
+color: #01ef8e;
+display: flex;
+gap: 0.5rem;
+align-items: center;
+
+.no-focus:focus {
+  outline: none;
+}
+
 
     .color-picker {
       cursor: pointer;
