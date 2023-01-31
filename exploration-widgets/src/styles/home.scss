@@ -47,6 +47,10 @@
   }
 }
 
+.whyte[contenteditable]:focus {
+  outline: none;
+}
+
 
 
 
@@ -154,4 +158,9 @@ align-items: center;
   input[type="range"]:focus {
     outline: none;
   }
+
+}
+
+.focus:outline-none:focus {
+  outline: none !important;
 }

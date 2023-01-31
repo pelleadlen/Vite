@@ -41,7 +41,7 @@ function App() {
                 to={dest.pathName}
                 key={index}
               >
-                {dest.name}
+                {/* {dest.name} */}
               </Link>
             ))}
           </div>

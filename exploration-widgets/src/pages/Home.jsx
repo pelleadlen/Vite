@@ -39,7 +39,7 @@ export const Home = () => {
       </main>
       <footer>
         <div className="color-change-wrapper">
-          <ColorPicker changeColor={(e) => setChangeHex(e.target.value)}  value={changeHex}  text="Text:" />
+          <ColorPicker changeHex={changeHex} changeColor={(e) => setChangeHex(e.target.value)}  value={changeHex}  text="Text:" />
           {/* <ColorPicker text="Text:" /> */}
      
         </div>
